@@ -13,3 +13,7 @@ spring:
         file-extension: yaml
         username: nacos
         password: nacos
+  config:
+    import:
+      #- classpath:application-devDruid.yml
+      - classpath:bootstrap-devSharding.yml
