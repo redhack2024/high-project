@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: snowy-gateway-app
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: reactive
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: snowy-cloud-2x-${spring.profiles.active}
+        group: ${spring.profiles.active}
+        prefix: ${spring.application.name}
+        file-extension: yaml
+        username: nacos
+        password: nacos
